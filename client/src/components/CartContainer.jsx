@@ -32,6 +32,10 @@ const CartContainer = () => {
     dispatch(clearCart())
   }
 
+  const alertMessage = ()=>{
+    alert('Thanks for Shopping...!!')
+  }
+
 
   return (
     <div className='py-12 mt-6'>
@@ -42,7 +46,7 @@ const CartContainer = () => {
         <div className='flex flex-col justify-center items-center text-center mt-5'>
           <img src='src/assets/empty.png' alt='empty-cart' className='w-[500px] h-[400px]' />
           <h4>Looks like you haven't made your choices yet</h4>
-          <Link to='/' className='flex justify-center gap-2 text-xl items-center' style={{ textDecoration: 'none' }}>
+          <Link to='/' className='flex text-blue-700  justify-center gap-2 text-xl font-semibold items-center mt-5' style={{ textDecoration: 'none' }}>
             <Arrow />
 
             Start Shopping</Link>
@@ -106,8 +110,10 @@ const CartContainer = () => {
                 <button onClick={() => {
                   dispatch(logoutUser(null))
                   dispatch(clearCart())
-                }} className='p-3 w-[120px] cursor-pointer  md:w-[200px] mb-3 font-normal text-md border bg-blue-600 hover:bg-blue-700 rounded-2xl text-white border-gray-400'>
+                  dispatch(alertMessage)
+                }}  className='p-3 w-[120px] cursor-pointer  md:w-[200px] mb-3 font-normal text-md border bg-blue-600 hover:bg-blue-700 rounded-2xl text-white border-gray-400'>
                   Check Out
+                  
                 </button>
 
               ) : (

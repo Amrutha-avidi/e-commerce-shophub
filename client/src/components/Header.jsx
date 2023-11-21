@@ -11,13 +11,13 @@ const Header = () => {
 
 
   return (
-    <div >
-      <header className='fixed w-full z-10 transition-all flex justify-between items-center px-6'>
+    <div  >
+      <header className='fixed  w-full z-10 transition-all flex justify-between items-center px-6'>
         <Link to='/'  >
           <img className='w-[180px]' src='src/assets/logo.png' alt='logo' />
         </Link>
         <div className='flex items-center gap-12'>
-          <Link to='/'  >
+          <Link  className='font-semibold' to='/'  >
             Products
           </Link>
           {auth._id ? (

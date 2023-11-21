@@ -10,7 +10,7 @@ const Layout = () => {
        <>
         <Provider  store={store}>
             <Header />
-            <Outlet  />
+            <Outlet />
         </Provider>
         </>
     )
